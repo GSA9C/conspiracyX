@@ -1,0 +1,78 @@
+<!-- this is the main page for webX -->
+<!doctype html> 
+<html class="no-js" lang="de">
+  <head>
+    <!-- meta -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Merlin" />
+    
+    <!-- title and favicon -->
+    <title>conspiracyX</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon/favicon.ico" />
+    
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/loremIpsum.css" />
+    
+    <!-- javascript -->
+    <script src="js/vendor/modernizr.js"></script>
+    
+  </head>
+  <body>
+    
+    <!-- Navigation -->
+    <div class="off-canvas-wrap" data-offcanvas>
+        <div class="inner-wrap">
+            <nav class="tab-bar">
+                <!-- menu toggle button -->
+                <section class="left-small">
+                    <a class="left-off-canvas-toggle menu-icon"><span></span></a>
+                </section>
+                <!-- title -->
+                <section class="right tab-bar-section">
+                    <h1 class="title">conspiracyX</h1>
+                </section>
+            </nav>
+            
+            <!-- menu layout -->
+            <nav class="left-off-canvas-menu">
+                <ul>
+                    <li><a href="">index.html</a>a</li>
+                </ul>
+            </nav>
+               
+            <!-- page content -->
+            <section class="main-section">
+                <h1 class="title">Lorem Ipsum</h1>
+                <div class="loremIpsum1000"><span></span></div>
+            </section>
+            
+            <!-- exit menu -->
+            <a class="exit-off-canvas"></a>
+        </div>
+    </div>
+  
+  <!-- important-->
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/fastclick.js"></script>
+    <script src="js/foundation.min.js"></script>
+  <!-- initializes foundation -->
+    <script>
+      $(document).foundation({
+    	  offcanvas: {
+    		  open_method: 'move',
+    		  close_on_click: true
+    	  }
+      });
+    </script>
+    <script>
+        $(window).on("load resize", function(){
+        	  height = Math.max($('.inner-wrap').height(), $(this).height());
+        	  $('.left-off-canvas-menu').height(height);
+        	});
+    </script>
+  </body>
+</html>
