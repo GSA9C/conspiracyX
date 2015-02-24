@@ -8,14 +8,14 @@
     <meta name="author" content="Merlin" />
     
     <!-- title and favicon -->
-    <title>conspiracyX</title>
+    <title>ConspiracyX</title>
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon/favicon.ico" />
     
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/app.css" />
-    <link rel="stylesheet" href="css/loremIpsum.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
     
     <!-- javascript -->
     <script src="js/vendor/modernizr.js"></script>
@@ -33,21 +33,27 @@
                 </section>
                 <!-- title -->
                 <section class="right tab-bar-section">
-                    <h1 class="title">conspiracyX</h1>
+                    <h1 class="title">ConspiracyX</h1>
                 </section>
             </nav>
             
             <!-- menu layout -->
             <nav class="left-off-canvas-menu">
                 <ul>
-                    <li><a href="">index.html</a>a</li>
+                    <li><a href=""><i class="fa fa-home">   Home</i></a>a</li>
                 </ul>
             </nav>
                
             <!-- page content -->
             <section class="main-section">
-                <h1 class="title">Lorem Ipsum</h1>
-                <div class="loremIpsum1000"><span></span></div>
+                <!-- Welcoming Modal -->
+                <div id="welcomeModal" class="reveal-modal" data-reveal>
+                     <p>Willkommen bei:</p>
+                     <h1 class="text-center subheader">ConspiracyX</h1>
+                      <span class="label right">fast die Wahrheit</span>
+                   <!-- <a class="close-reveal-modal">&#215;</a>-->
+                </div>
+                <h1 class="subheader">Verschwörungen:</h1>
             </section>
             
             <!-- exit menu -->
@@ -67,6 +73,8 @@
     		  close_on_click: true
     	  }
       });
+      
+      $(document).ready(function(){$('#welcomeModal').foundation('reveal', 'open')});
     </script>
     <script>
         $(window).on("load resize", function(){
